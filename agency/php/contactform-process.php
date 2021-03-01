@@ -25,8 +25,8 @@ if (empty($_POST["terms"])) {
     $terms = $_POST["terms"];
 }
 
-$EmailTo = "yourname@domain.com";
-$Subject = "New message from Aria landing page";
+$EmailTo = "aakash1995bansal@gmail.com";
+$Subject = "New message from EduInIndia Website";
 
 // prepare email body text
 $Body = "";

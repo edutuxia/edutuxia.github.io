@@ -819,11 +819,11 @@ section .login-overlay{
         <p class="login-overlay" style="font-size: 1em">
           A member of the eduInUK team will be in touch ASAP to book your free online consultation with one of our experts.
         </p>
-        <form >
-          <input type="text" placeholder="First Name" class="form-control2" required />
-          <input type="text" placeholder="Last Name" class="form-control2" required/>
-          <input type="text" placeholder="Email ID" class="form-control2" required/>
-          <input type="text" placeholder="Mobile Number" class="form-control2" required/>
+        <form>
+          <input type="text" name="fname" placeholder="First Name" class="form-control2" required />
+          <input type="text" name="lname" placeholder="Last Name" class="form-control2" required/>
+          <input type="text" name="email" placeholder="Email ID" class="form-control2" required/>
+          <input type="text" name="tel" placeholder="Mobile Number" class="form-control2" required/>
           <select name="Nationality" placeholder="Nationality" class="form-control2" style="margin-bottom: 0.5rem" required>
             <option value="">Your Nationality</option>
             <option value="afghan">Afghan</option>
@@ -1019,7 +1019,7 @@ section .login-overlay{
             <option value="zambian">Zambian</option>
             <option value="zimbabwean">Zimbabwean</option>
           </select>
-          <select placeholder="Current Country of Residence" class="form-control2" required/>
+          <select name="resident" placeholder="Current Country of Residence" class="form-control2" required/>
              <option value="">Current Country of Residence</option>       
              <option value="Afganistan">Afghanistan</option>
              <option value="Albania">Albania</option>
@@ -1268,7 +1268,7 @@ section .login-overlay{
              <option value="Zambia">Zambia</option>
              <option value="Zimbabwe">Zimbabwe</option>
           </select>
-          <select placeholder="Type of Study" class="form-control2" required/>
+          <select name="typeofstudy" placeholder="Type of Study" class="form-control2" required/>
             <option value="">Type of Study</option>
             <option value="UG">Undergraduate Program</option>
             <option value="PG">Postgraduate Program</option>
@@ -1276,14 +1276,14 @@ section .login-overlay{
             <option value="Foundation">Foundation</option>
             <option value="Diploma">Diploma</option>
            </select>
-           <select placeholder="Year of Study" class="form-control2" required/>
+           <select name="year" placeholder="Year of Study" class="form-control2" required/>
             <option value="">Year of Study</option>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
             <option value="2023">2023</option>
            </select>
-          <input type="text" placeholder="Which Subjects are you interested in?" class="form-control2" style="margin-top:0.5rem" required/>
-          <select placeholder="How did you hear about us?" class="form-control2" required/>
+          <input type="text" name="subject" placeholder="Which Subjects are you interested in?" class="form-control2" style="margin-top:0.5rem" required/>
+          <select name="how" placeholder="How did you hear about us?" class="form-control2" required/>
             <option value="">How did you hear about us?</option>
             <option value="Google Search/Engine">Google/Search Engine</option>
             <option value="Word of Mouth">Word of Mouth</option>
@@ -1292,6 +1292,8 @@ section .login-overlay{
             <option value="Twitter">Twitter</option>
             <option value="Teacher">School/College/Teacher</option>
            </select>
+           <p style="font-size:1rem;color:white"><input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I allow EduInUK to reach out to me through e-mail and phone.</p> 
+                            <div class="help-block with-errors"></div>
           <button type="submit" class="btn btn-primary btn-block btn-large">Book my Consultation</button>
         </form>
        </section>
@@ -1398,3 +1400,4 @@ $('.overlay-close').on('click', function(){
 </script>
 </body>
 </html>
+
