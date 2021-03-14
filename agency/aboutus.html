@@ -179,211 +179,94 @@ main {
   color:#0065b0;
 }
 
-  .overlay {
-  position: fixed;
-  width: 80%;
-  height: 80%;
-  top: 10%;
-  left: 10%;
-  background-color: #4a77d4; 
-  background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); 
-  background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: linear-gradient(top, #6eb6de, #4a77d4); 
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  
-  border: 1px solid #3762bc; 
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: sticky;
+  bottom: 10%;
+  z-index: 1;
 }
 
-/* Overlay closing cross */
-.overlay .overlay-close {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  overflow: hidden;
-  border: none;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVDhPYwCBwNrtLSAM5hAAGGpBnLDGvV9AmJAhWNX6VW1rBQk0rn32H58hMM0wdSB9UCnChuDVDAO4DCFKMwygG+Jfvf0I0ZphANmQpN4Tf0jSDAMgm0Gau7d/ABsC4kOlCANkPyO7AD1gsQL0AAuo2nYUmY/XEFyhjR6wWA3BpRkG8BpCSDMM4DQEJoFPMwzgVAviENIMA6SoJQIwMAAA1I4lHRFoYnYAAAAASUVORK5CYII=") no-repeat center center;
-  text-indent: 200%;
-  color: transparent;
-  outline: none;
-  z-index: 100;
-  cursor: pointer;
+/* Add styles to the form container */
+.form-container {
+  max-width: 80%;
+  height: 400px;
+  margin: 15%;
+  padding: 10px;
+  background-color: white;
+  overflow-y: scroll;
+  border-radius: 0px;
 }
 
-.login-part{
-  display:inline;
-  position: absolute;
-  top: 30%;
-  left: 35%;
-  margin: -150px 0 0 -150px;
-  width:60%;
-  height:300px;
+#close-x {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    border-radius:20px;
+    color:#fff;
 }
 
-input { 
-margin-bottom: 10px;
-}
-input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+#close-x:hover {
+        float:right;
+        display:inline-block;
+        padding:2px 5px;
+        background:#f00;
+    color:#fff;
+    }
 
-
-.btn {
-display: inline-block; 
-*display: inline; 
-*zoom: 1; 
-padding: 4px 10px 4px; 
-margin-bottom: 0; 
-font-size: 13px; 
-line-height: 18px; 
-color: #333333; 
-text-align: center;
-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); 
-vertical-align: middle; 
-background-color: #f5f5f5; 
-background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); 
-background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: linear-gradient(top, #ffffff, #e6e6e6); 
-background-repeat: repeat-x; 
-filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); 
-border-color: #e6e6e6 #e6e6e6 #e6e6e6; 
-border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); 
-border: 1px solid #e6e6e6; 
--webkit-border-radius: 4px; 
--moz-border-radius: 4px; 
-border-radius: 4px; 
--webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
--moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
-cursor: pointer;
-*margin-left: .3em;
+/* Full-width input fields */
+.form-container input, select {
+  width: 90%;
+  padding: 3px;
+  margin: 5px 0 10px 0;
+  border-radius: 3px;
+  background: #ffffff;
 }
 
-.btn:hover, 
-.btn:active,
-.btn.active,
-.btn.disabled, 
-.btn[disabled] {
-background-color: #e6e6e6;
- }
-
-.btn-large { 
-  padding: 9px 14px; 
-  font-size: 15px; 
-  line-height: normal; 
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px; 
-  border-radius: 5px; 
-}
- 
- .btn:hover { 
- color: #333333; 
- text-decoration: none; 
- background-color: #e6e6e6; 
- background-position: 0 -15px; 
- -webkit-transition: background-position 0.1s linear; 
- -moz-transition: background-position 0.1s linear; 
- -ms-transition: background-position 0.1s linear; 
- -o-transition: background-position 0.1s linear;
- transition: background-position 0.1s linear;
-}
-
-.btn-primary,
-.btn-primary:hover { 
-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); 
-color: #ffffff; 
-}
-
-.btn-primary.active {
- color: rgba(255, 255, 255, 0.75); 
- }
-
- .btn-primary { 
- background-color: #4a77d4; 
- background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); 
- background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: linear-gradient(top, #6eb6de, #4a77d4); 
- background-repeat: repeat-x;
- filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  
- border: 1px solid #3762bc; 
- text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
- box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); 
- }
- 
-.btn-primary:hover, 
-.btn-primary:active,
-.btn-primary.active, 
-.btn-primary.disabled, 
-.btn-primary[disabled] { 
-filter: none; 
-background-color: #4a77d4;
- }
- 
-.btn-block { 
-width: 60%; 
-display:block;
-left:20%;
-}
-
-
-
-.overlay-content{
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-  transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-.overlay-content.open {
-  opacity: 0.9;
-  visibility: visible;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-section p {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px 0;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-section .naslov{
-  margin: 0 auto;
-  font-weight: 300;
-  font-size: 2.5em;
-}
-
-section .login-overlay{
-  color: #fff;
-  font-size: 2em;
-}
-
-.form-control2 {
-  display: inline;
-  width: 48%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
+/* When the inputs get focus, do something */
+.form-container input:focus, select:focus {
   background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 </style>
 
@@ -444,7 +327,7 @@ section .login-overlay{
                     <a class="nav-link page-scroll" href="index.html#why-the-uk">Why Study in the UK</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" id="trigger-overlay2" href="#">Enquire Today</a>
+                    <a class="nav-link page-scroll" onClick="openForm()" href="#">Enquire Today</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">
@@ -569,22 +452,50 @@ section .login-overlay{
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
 
-    <div class="overlay overlay-content" style="margin-top: 10px">
-    <button type="button" class="overlay-close">Close</button>
-      <section class="login-part">
-        <p class="login-overlay">
-          Book an Appointment<br>
-        </p>
-        <p class="login-overlay" style="font-size: 1em">
-          A member of the eduInUK team will be in touch ASAP to book your free online consultation with one of our experts.
-        </p>
-        <form>
-          <input type="text" name="fname" placeholder="First Name" class="form-control2" required />
-          <input type="text" name="lname" placeholder="Last Name" class="form-control2" required/>
-          <input type="text" name="email" placeholder="Email ID" class="form-control2" required/>
-          <input type="text" name="tel" placeholder="Mobile Number" class="form-control2" required/>
-          <select name="Nationality" placeholder="Nationality" class="form-control2" style="margin-bottom: 0.5rem" required>
-            <option value="">Your Nationality</option>
+   <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <a onclick="closeForm()" href="#"><span id='close-x'>&#10006;</span></a>
+    <h4><center><font style="font-family:Kollektify">Book Your Appointment</font></center><br></h4>
+    <table style="width: 90%;margin-left: 7.5%">
+    <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 50%;">
+    </colgroup>
+      <tr>
+        <td>
+          <label for="fname"><font style="font-family:Kollektify;font-size:1.3rem"><b>First Name *</b></label></font></label>
+        </td>
+        <td>
+          <label for="lname"><font style="font-family:Kollektify;font-size:1.3rem"><b>Last Name *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="fname" required></td>
+        <td><input type="text" name="lname" required></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="mail"><font style="font-family:Kollektify;font-size:1.3rem"><b>E-Mail ID *</b></label></font></label>
+        </td>
+        <td>
+          <label for="mobile"><font style="font-family:Kollektify;font-size:1.3rem"><b>Mobile Number *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="mail" required></td>
+        <td><input type="text" name="mobile" required></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="nationality"><font style="font-family:Kollektify;font-size:1.3rem"><b>Your Nationality *</b></label></font></label>
+        </td>
+        <td>
+          <label for="residence"><font style="font-family:Kollektify;font-size:1.3rem"><b>Country of Residence *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><select name="nationality" style="border: 2px solid black;padding:3px" required>
+            <option value="indian">Indian</option>
             <option value="afghan">Afghan</option>
             <option value="albanian">Albanian</option>
             <option value="algerian">Algerian</option>
@@ -777,9 +688,9 @@ section .login-overlay{
             <option value="yemenite">Yemenite</option>
             <option value="zambian">Zambian</option>
             <option value="zimbabwean">Zimbabwean</option>
-          </select>
-          <select name="resident" placeholder="Current Country of Residence" class="form-control2" required/>
-             <option value="">Current Country of Residence</option>       
+          </select></td>
+        <td><select name="residence" style="border: 2px solid black;padding:3px" required/>
+             <option value="India">India</option>       
              <option value="Afganistan">Afghanistan</option>
              <option value="Albania">Albania</option>
              <option value="Algeria">Algeria</option>
@@ -1026,37 +937,55 @@ section .login-overlay{
              <option value="Zaire">Zaire</option>
              <option value="Zambia">Zambia</option>
              <option value="Zimbabwe">Zimbabwe</option>
-          </select>
-          <select name="typeofstudy" placeholder="Type of Study" class="form-control2" required/>
-            <option value="">Type of Study</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="type"><font style="font-family:Kollektify;font-size:1.3rem"><b>Type of Study *</b></label></font></label>
+        </td>
+        <td>
+          <label for="year"><font style="font-family:Kollektify;font-size:1.3rem"><b>Year of Study *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><select name="type" style="border:2px solid black;padding:3px" required/>
             <option value="UG">Undergraduate Program</option>
             <option value="PG">Postgraduate Program</option>
             <option value="PhD">PhD</option>
             <option value="Foundation">Foundation</option>
             <option value="Diploma">Diploma</option>
-           </select>
-           <select name="year" placeholder="Year of Study" class="form-control2" required/>
-            <option value="">Year of Study</option>
+           </select></td>
+        <td><select name="year" style="border:2px solid black;padding:3px" required/>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
             <option value="2023">2023</option>
-           </select>
-          <input type="text" name="subject" placeholder="Which Subjects are you interested in?" class="form-control2" style="margin-top:0.5rem" required/>
-          <select name="how" placeholder="How did you hear about us?" class="form-control2" required/>
-            <option value="">How did you hear about us?</option>
+           </select></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="subject"><font style="font-family:Kollektify;font-size:1.3rem"><b>Interested Subject *</b></label></font></label>
+        </td>
+        <td>
+          <label for="hear"><font style="font-family:Kollektify;font-size:1.3rem"><b>How did you hear about us *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="subject" required></td>
+        <td><select name="hear" style="border:2px solid black;padding:3px" required/>
             <option value="Google Search/Engine">Google/Search Engine</option>
             <option value="Word of Mouth">Word of Mouth</option>
             <option value="Facebook">Facebook</option>
             <option value="Instagram">Instagram</option>
             <option value="Twitter">Twitter</option>
             <option value="Teacher">School/College/Teacher</option>
-           </select>
-           <p style="font-size:1rem;color:white"><input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I allow EduInUK to reach out to me through e-mail and phone.</p> 
-                            <div class="help-block with-errors"></div>
-          <button type="submit" class="btn btn-primary btn-block btn-large">Book my Consultation</button>
-        </form>
-       </section>
-  
+           </select></td>
+      </tr>
+    </table>
+    <br><br>
+    <center>
+      <button type="submit" class="btn" style="width:40%;background-color:#113488;font-family: Kollektify"><b>Enquire Now</b></button>
+      </center>
+  </form>
 </div>
     
         
@@ -1159,6 +1088,20 @@ function isElementInViewport(el) {
 $('.overlay-close').on('click', function(){
   $('.overlay-content').removeClass('open');
 });
+</script>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function openForm2() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
 </script>
 </body>
 </html>
