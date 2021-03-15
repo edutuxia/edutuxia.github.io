@@ -36,24 +36,91 @@
     <link rel="icon" href="images/logo.png">
 
 <style>
-  .btngo {
-  border: 2px solid #000000;
-  background-color: white;
-  color: #000000;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
+
+html{
+  scroll-behavior: smooth;
 }
 
- .gobtn {
-  border-color: #000000;
-  color:#000000;
+  .btngo {
+  border: 2px solid #fff;
+  background-color: rgb(0,0,0);
+  background-color: rgb(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  z-index: 2;
 }
-.gobtn:hover {
-  border-color: #000000;
-  background-color: #000000;
-  color:white;
+
+
+.btngo:hover {
+  border: 2px solid #000;
+  background-color: rgb(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+  color: #000;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  z-index: 2;
 }
+
+.btngo3 {
+  border: 2px solid #fff;
+  background-color: #ff9933;
+  opacity:0.9;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  z-index: 2;
+}
+
+.btngo3:hover {
+  border: 2px solid #ff9933;
+  background-color: #fff;
+  opacity:0.9;
+  backdrop-filter: blur(8px);
+  color: #ff9933;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  z-index: 2;
+}
+
+.btngo4 {
+  border: 2px solid #fff;
+  background-color: #138808;
+  opacity:0.9;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  z-index: 2;
+  position: relative;
+  bottom: 9px;
+}
+
+.btngo4:hover {
+  border: 2px solid #138808;
+  background-color: #fff;
+  opacity:0.8;
+  backdrop-filter: blur(8px);
+  color: #138808;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+  z-index: 2;
+}
+
  .btngo2 {
   border: 2px solid #113448;
   background-color: white;
@@ -94,6 +161,36 @@
   margin-left: 5px;
 }
 
+.cardbox {
+  background-color: #fff;
+  border:2px solid #ff9933;
+  transition: transform .2s;
+  padding:10px;
+  border-radius:10px;
+  margin:10px;
+}
+
+.cardbox:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+.cardbox2 {
+  background-color: #000;
+  border:2px solid #138808;
+  transition: transform .2s;
+  padding:10px;
+  border-radius:10px;
+  margin:10px;
+  color:white;
+}
+
+.cardbox2:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
 
 .collapsible-content {
   padding: 0 18px;
@@ -196,212 +293,109 @@ main {
 </style>
 
 <style>
-  .overlay {
-  position: fixed;
-  width: 80%;
-  height: 80%;
-  top: 10%;
-  left: 10%;
-  background-color: #4a77d4; 
-  background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); 
-  background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); 
-  background-image: linear-gradient(top, #6eb6de, #4a77d4); 
-  background-repeat: repeat-x;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  
-  border: 1px solid #3762bc; 
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Overlay closing cross */
-.overlay .overlay-close {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  overflow: hidden;
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
   border: none;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVDhPYwCBwNrtLSAM5hAAGGpBnLDGvV9AmJAhWNX6VW1rBQk0rn32H58hMM0wdSB9UCnChuDVDAO4DCFKMwygG+Jfvf0I0ZphANmQpN4Tf0jSDAMgm0Gau7d/ABsC4kOlCANkPyO7AD1gsQL0AAuo2nYUmY/XEFyhjR6wWA3BpRkG8BpCSDMM4DQEJoFPMwzgVAviENIMA6SoJQIwMAAA1I4lHRFoYnYAAAAASUVORK5CYII=") no-repeat center center;
-  text-indent: 200%;
-  color: transparent;
-  outline: none;
-  z-index: 100;
   cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
 }
 
-.login-part{
-  display:inline;
-  position: absolute;
-  top: 30%;
-  left: 35%;
-  margin: -150px 0 0 -150px;
-  width:60%;
-  height:300px;
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: sticky;
+  bottom: 10%;
+  z-index: 1;
 }
 
-input { 
-margin-bottom: 10px;
-}
-input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
-
-
-.btn {
-display: inline-block; 
-*display: inline; 
-*zoom: 1; 
-padding: 4px 10px 4px; 
-margin-bottom: 0; 
-font-size: 13px; 
-line-height: 18px; 
-color: #333333; 
-text-align: center;
-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); 
-vertical-align: middle; 
-background-color: #f5f5f5; 
-background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); 
-background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); 
-background-image: linear-gradient(top, #ffffff, #e6e6e6); 
-background-repeat: repeat-x; 
-filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); 
-border-color: #e6e6e6 #e6e6e6 #e6e6e6; 
-border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); 
-border: 1px solid #e6e6e6; 
--webkit-border-radius: 4px; 
--moz-border-radius: 4px; 
-border-radius: 4px; 
--webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
--moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); 
-cursor: pointer;
-*margin-left: .3em;
+/* Add styles to the form container */
+.form-container {
+  max-width: 100%;
+  height: 480px;
+  margin: 5%;
+  padding: 10px;
+  background-color: white;
+  overflow-y: scroll;
+  border-radius: 0px;
 }
 
-.btn:hover, 
-.btn:active,
-.btn.active,
-.btn.disabled, 
-.btn[disabled] {
-background-color: #e6e6e6;
- }
-
-.btn-large { 
-  padding: 9px 14px; 
-  font-size: 15px; 
-  line-height: normal; 
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px; 
-  border-radius: 5px; 
-}
- 
- .btn:hover { 
- color: #333333; 
- text-decoration: none; 
- background-color: #e6e6e6; 
- background-position: 0 -15px; 
- -webkit-transition: background-position 0.1s linear; 
- -moz-transition: background-position 0.1s linear; 
- -ms-transition: background-position 0.1s linear; 
- -o-transition: background-position 0.1s linear;
- transition: background-position 0.1s linear;
+#close-x {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    border-radius:20px;
+    color:#fff;
 }
 
-.btn-primary,
-.btn-primary:hover { 
-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); 
-color: #ffffff; 
+#close-x:hover {
+        float:right;
+        display:inline-block;
+        padding:2px 5px;
+        background:#f00;
+    color:#fff;
+    }
+
+/* Full-width input fields */
+.form-container input, select {
+  width: 90%;
+  padding: 3px;
+  margin: 5px 0 10px 0;
+  border-radius: 3px;
+  background: #ffffff;
 }
 
-.btn-primary.active {
- color: rgba(255, 255, 255, 0.75); 
- }
-
- .btn-primary { 
- background-color: #4a77d4; 
- background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); 
- background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); 
- background-image: linear-gradient(top, #6eb6de, #4a77d4); 
- background-repeat: repeat-x;
- filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  
- border: 1px solid #3762bc; 
- text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
- box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); 
- }
- 
-.btn-primary:hover, 
-.btn-primary:active,
-.btn-primary.active, 
-.btn-primary.disabled, 
-.btn-primary[disabled] { 
-filter: none; 
-background-color: #4a77d4;
- }
- 
-.btn-block { 
-width: 60%; 
-display:block;
-left:20%;
-}
-
-
-
-.overlay-content{
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-  transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-.overlay-content.open {
-  opacity: 0.9;
-  visibility: visible;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-section p {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px 0;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-section .naslov{
-  margin: 0 auto;
-  font-weight: 300;
-  font-size: 2.5em;
-}
-
-section .login-overlay{
-  color: #fff;
-  font-size: 2em;
-}
-
-.form-control2 {
-  display: inline;
-  width: 48%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
+/* When the inputs get focus, do something */
+.form-container input:focus, select:focus {
   background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
 }
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 </style>
 
 </head>
@@ -436,49 +430,49 @@ section .login-overlay{
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto" style="font-size: 17px">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#header">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html#header">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="aboutus.html">About Us</a>
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#intro">What We Offer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#services">Our Services</a>
                 </li>
                 <!--<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#service" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                    <a class="nav-link dropdown-toggle page-scroll" href="#intro" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">What We Offer</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#"><span class="item-text">What we do</span></a>
+                        <a class="dropdown-item" href="#services"><span class="item-text">Our Services</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#"><span class="item-text">Our People</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#"><span class="item-text">Our Partners</span></a>
                     </div>
                 </li>-->
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#intro">What We Offer</a>
+                    <a class="nav-link" href="index.html#path-uk">Your Path to the UK</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#path-uk">Your Path to the UK</a>
+                    <a class="nav-link" href="index.html#why-the-uk">Why Study in the UK</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#why-the-uk">Why Study in the UK</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" id="trigger-overlay2" href="#">Enquire Today</a>
+                    <a class="nav-link" href="enquire.html">Enquire Today</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">
                 <span class="fa-stack">
-                    <a href="#">
+                    <a href="https://www.facebook.com/eduInUK1/">
                         <span class="hexagon"></span>
                         <i class="fab fa-facebook-f fa-stack-1x"></i>
                     </a>
                 </span>
                 <span class="fa-stack">
-                    <a href="#">
+                    <a href="https://www.twitter.com/_eduInUK">
                         <span class="hexagon"></span>
                         <i class="fab fa-twitter fa-stack-1x"></i>
                     </a>
                 </span>
                 <span class="fa-stack">
-                    <a href="#">
+                    <a href="https://www.instagram.com/eduInUK/">
                         <span class="hexagon"></span>
                         <i class="fab fa-instagram fa-stack-1x"></i>
                     </a>
@@ -500,7 +494,7 @@ section .login-overlay{
                             <!--<h1 align="center" style="font-size: 100px;color:white">ed<font style="color:#ff9933">I</font><font style="color:#138808">n</font>UK</h1><br>-->
                             <img src="images/logo.png" width="600rem" height="auto">
                             <p class="p-large" align="center" style="font-size: 20px;color:white"><b>Study abroad in the UK, completely <i>free of charge</i>!</b><br><br><br>
-                            <a class="btngo gobtn page-scroll" href="index.html#intro" style="font-size:14px;border-radius: 8px; text-decoration: none"><b>DISCOVER</b></a><br><br><br><br><br><br>
+                            <a class="btngo page-scroll" href="index.html#intro" style="font-size:16px; text-decoration: none"><b>DISCOVER</b></a><br><br><br><br><br><br>
                             <!--<table align="center">
                               <td style="width:1000px;text-align: left"><a class="btngo gobtn page-scroll" href="bolton.html" style="border-top-right-radius: 20px;border-top-left-radius: 20px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;font-size:1.1rem;text-decoration: none;padding-top: :2px;padding-bottom: 2px"><b>Featured Course</b></a></td>
                               <td style="width:1000px;text-align: right;"><a class="btngo gobtn page-scroll" href="#" id="trigger-overlay3" style="border-top-right-radius: 20px;border-top-left-radius: 20px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;font-size:1.1rem;text-decoration: none;padding-top: :2px;padding-bottom: 2px"><b>Enquire Today</b></a></td>-
@@ -540,103 +534,213 @@ section .login-overlay{
     </div> <!-- end of basic-1 -->
 
 
-    
+    <div id="services" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="section-title">
+                    <h1 align="center" style="font-family:Zona+Pro;color:black;font-size:4rem;font-weight: 1200">Our Services</h1><br>
+                    <h2 align="center" style="font-family:Zona+Pro;color:black;font-size:2.2rem;font-weight: 1200">Choose the service package that suits your needs</font></h2>
+                  </div><br>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="container">
+              <table style="width:100%;margin-left:2.5%">
+                <colgroup>
+                  <col span="1"style="width:45%">
+                  <col span="1"style="width:10%">
+                  <col span="1"style="width:45%">
+                </colgroup>
+                <tr>
+                  <td>
+                    <div class="cardbox" style="height:560px">
+                      <center><h4>Standard <font style="color:#ff9933">Package</font></h4>
+                      <h5><br>Our tailored, end-to-end solution to studying in the UK<br><br></h5></center>
+                      <table style="font-family: Kollektif">
+                        <colgroup>
+                          <col span="1"style="width:20%">
+                          <col span="1"style="width:80%">
+                        </colgroup>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Dedicated counselor providing expert application Guidance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Full Visa application assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Accommodation assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Flight assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">International Banking assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Airport Transfer</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Helping you settle in the UK; Post landing support through NISAU</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><center><br><font style="font-size:2rem;color:#ff9933"><b>&#163; 0.00</b><br><br></center></td>
+                        </tr>
+                      </table>
+                      <center><a class="btngo3 gobtn3 page-scroll" href="enquire.html" style="font-size:16px; text-decoration: none;width:100%;font-family: Kollektif"><b>Know More</b></a><br></center>
+                    </div>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                    <div class="cardbox2" style="height:560px">
+                      <center><h4 style="color:white">Premium <font style="color:#138808">Package</font></h4>
+                      <h5 style="color:white"><br>THE premium career and lifestyle service<br><br><br><br><br><br></h5>
+                      <h5 style="color:white"><br>You're not here to take part<br> ...you're here to take over.<br><br><br><br><br><br><br><br><br><br><br></h5></center>
+                      <table style="font-family: Kollektif;color:white">
+                        <colgroup>
+                          <col span="1"style="width:20%">
+                          <col span="1"style="width:80%">
+                        </colgroup>
+                        <!--<tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Dedicated counselor providing expert application Guidance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Full Visa application assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Accommodation assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Flight assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">International Banking assistance</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Airport Transfer</td>
+                        </tr>
+                        <tr>
+                          <td style="padding:5px"><img src="images/bullet.png" width="50px" height="auto"></td>
+                          <td style="padding:5px">Helping you settle in the UK; Post landing support through NISAU</td>
+                        </tr>
+                        <tr>
+                          <td><br></td>
+                          <td><br></td>
+                        </tr>-->
+                      </table>
+                      <center><a class="btngo4 gobtn4" href="comingsoon.html" style="font-size:16px; text-decoration: none;width:100%;font-family: Kollektif"><b>Know More</b></a><br></center>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of services -->
 
     
 
 <!-- Ready To Shine -->
-    <div id="path-uk" class="basic-1" style="background-color: #818d98">
+    <div id="path-uk" class="basic-1" style="background-color: #ffffff">
         <div class="section-title"><h1 align="center">Your Path to the UK</h1>
         </div><br>
-        <section class="cd-timeline js-cd-timeline">
+        <section class="cd-timeline js-cd-timeline" style="background-color: #ffffff">
           <div class="container max-width-lg cd-timeline__container">
       <div class="cd-timeline__block">
-        <div class="cd-timeline__img cd-timeline__img--picture">
-          <img src="images/cd-icon-picture.svg" alt="Picture">
+        <div class="cd-timeline__img cd-timeline__img--a">
+          <p style="font-family:Zona+Pro;color:white;font-size: 1.8rem"><b><i>1</i></b></p>
         </div> <!-- cd-timeline__img -->
 
         <div class="cd-timeline__content text-component">
-          <h2>Explore Your Options</h2>
-          <p class="color-contrast-medium" align="justify">Book your free consultation with our advisors and tell us your story, your passion, aspirations, goals and interests. We will then curate a shortlist of universities and courses that are personalized to your requirements and circumstances.</p>
+          <h2 style="font-family:Zona+Pro;">Explore Your <font style="color:#e23838">Options</font></h2>
+          <p class="color-contrast-medium" align="justify" style="font-family: Kollektif;text-align: justify">Book your free consultation with our advisors and tell us your story, your passion, aspirations, goals and interests. We will then curate a shortlist of universities and courses that are personalized to your requirements and circumstances.</p>
 
           <div class="flex justify-between items-center">
-            <span class="cd-timeline__date">Step 1</span>
           </div>
         </div> <!-- cd-timeline__content -->
       </div> <!-- cd-timeline__block -->
 
       <div class="cd-timeline__block">
-        <div class="cd-timeline__img cd-timeline__img--movie">
-          <img src="images/cd-icon-movie.svg" alt="Movie">
+        <div class="cd-timeline__img cd-timeline__img--b">
+          <p style="font-family:Zona+Pro;color:white;font-size: 1.8rem"><b><i>2</i></b></p>
         </div> <!-- cd-timeline__img -->
 
         <div class="cd-timeline__content text-component">
-          <h2>Design Your Career</h2>
-          <p class="color-contrast-medium" align="justify">Your personal advisor will then sit down with you (safely over zoom) and finalize your target universities. It’s time to start working towards the ultimate career you want to build.</p>
+          <h2 style="font-family:Zona+Pro">Design Your <font style="color:#f78200">Career</font></h2>
+          <p class="color-contrast-medium" align="justify" style="font-family: Kollektif;text-align: justify">Your personal advisor will then sit down with you (safely over zoom) and finalize your target universities. It’s time to start working towards the ultimate career you want to build.</p>
           
           <div class="flex justify-between items-center">
-            <span class="cd-timeline__date">Step 2</span>
           </div>
         </div> <!-- cd-timeline__content -->
       </div> <!-- cd-timeline__block -->
 
       <div class="cd-timeline__block">
-        <div class="cd-timeline__img cd-timeline__img--picture">
-          <img src="images/cd-icon-picture.svg" alt="Picture">
+        <div class="cd-timeline__img cd-timeline__img--c">
+          <p style="font-family:Zona+Pro;color:white;font-size: 1.8rem"><b><i>3</i></b></p>
         </div> <!-- cd-timeline__img -->
 
         <div class="cd-timeline__content text-component">
-          <h2>Apply To Universities</h2>
-          <p class="color-contrast-medium">From English language tests to Statements of Purpose, we will help you on every step of the way. Our dedicated application team will make and track the applications on your behalf so you can sit back and relax. At this stage, if you need Financial Assistance, our specialist advisors can help you find bank and other institutional loans.</p>
+          <h2 style="font-family:Zona+Pro">Apply To <font style="color:#ffb900">Universities</font></h2>
+          <p class="color-contrast-medium" style="font-family: Kollektif;text-align: justify">From English language tests to Statements of Purpose, we will help you on every step of the way. Our dedicated application team will make and track the applications on your behalf so you can sit back and relax. At this stage, if you need Financial Assistance, our specialist advisors can help you find bank and other institutional loans.</p>
 
           <div class="flex justify-between items-center">
-            <span class="cd-timeline__date">Step 3</span>
           </div>
         </div> <!-- cd-timeline__content -->
       </div> <!-- cd-timeline__block -->
 
       <div class="cd-timeline__block">
-        <div class="cd-timeline__img cd-timeline__img--location">
-          <img src="images/cd-icon-location.svg" alt="Location">
+        <div class="cd-timeline__img cd-timeline__img--d">
+          <p style="font-family:Zona+Pro;color:white;font-size: 1.8rem"><b><i>4</i></b></p>
         </div> <!-- cd-timeline__img -->
 
         <div class="cd-timeline__content text-component">
-          <h2>Secure Your Visa</h2>
-          <p class="color-contrast-medium" align="justify">This is a crucial step in your journey and one that must be handled with utmost care. We will guide you through the entire process of applying for your visa, including checking your application form, preparing/checking supporting documents, obtaining the Confirmation of Acceptance for Studies (CAS) and preparing you for the visa interview.</p>
+          <h2 style="font-family:Zona+Pro">Secure Your <font style="color:#5ebd3e">Visa</font></h2>
+          <p class="color-contrast-medium" align="justify" style="font-family: Kollektif;text-align: justify">This is a crucial step in your journey and one that must be handled with utmost care. We will guide you through the entire process of applying for your visa, including checking your application form, preparing/checking supporting documents, obtaining the Confirmation of Acceptance for Studies (CAS) and preparing you for the visa interview.</p>
 
           <div class="flex justify-between items-center">
-            <span class="cd-timeline__date">Step 4</span>
           </div>
         </div> <!-- cd-timeline__content -->
       </div> <!-- cd-timeline__block -->
 
       <div class="cd-timeline__block">
-        <div class="cd-timeline__img cd-timeline__img--location">
-          <img src="images/cd-icon-location.svg" alt="Location">
+        <div class="cd-timeline__img cd-timeline__img--e">
+          <p style="font-family:Zona+Pro;color:white;font-size: 1.8rem"><b><i>5</i></b></p>
         </div> <!-- cd-timeline__img -->
 
         <div class="cd-timeline__content text-component">
-          <h2>Prepare To Fly</h2>
-          <p class="color-contrast-medium" align="justify">Nearly there, but not quite yet! From finding suitable accommodation to opening a UK bank account, to figuring out how to transfer money and booking flights and cabs, let eduInUK’s partners do the hard work for you. We have special partnerships with various service providers, making eduInUK your true one-stop-shop. All free of charge, obviously.<br>Oh, and before you depart, enjoy our pre-departure crate of essentials (alongside a briefing) to make sure you are all set up and roaring to go. 
+          <h2 style="font-family:Zona+Pro">Prepare To <font style="color:#009cdf">Fly</font></h2>
+          <p class="color-contrast-medium" align="justify" style="font-family: Kollektif;text-align: justify">Nearly there, but not quite yet! From finding suitable accommodation to opening a UK bank account, to figuring out how to transfer money and booking flights and cabs, let eduInUK’s partners do the hard work for you. We have special partnerships with various service providers, making eduInUK your true one-stop-shop. All free of charge, obviously.<br>Oh, and before you depart, enjoy our pre-departure crate of essentials (alongside a briefing) to make sure you are all set up and roaring to go. 
 </p>
 
           <div class="flex justify-between items-center">
-            <span class="cd-timeline__date">Step 5</span>
+            <!--<span class="cd-timeline__date"><img src="images/bullet.png"></span>-->
           </div>
         </div> <!-- cd-timeline__content -->
       </div> <!-- cd-timeline__block -->
 
       <div class="cd-timeline__block">
-        <div class="cd-timeline__img cd-timeline__img--movie">
-          <img src="images/cd-icon-movie.svg" alt="Movie">
+        <div class="cd-timeline__img cd-timeline__img--f">
+          <p style="font-family:Zona+Pro;color:white;font-size: 1.8rem"><b><i>6</i></b></p>
         </div> <!-- cd-timeline__img -->
 
         <div class="cd-timeline__content text-component">
-          <h2>Arrival in the UK</h2>
-          <p class="color-contrast-medium" align="justify">Some 8 hours of flying later, you have arrived in the UK. This country is about to transform your life. As an eduINUK student, you also automatically become a member of the <a href="https://www.nisau.org.uk" target="_blank">National Indian Students and Alumni Union UK (NISAU)</a>. NISAU is the oldest and largest body representing Indian students and alumni in the UK and are there to look after your welfare and to help you with any problems you may have. They also host amazing events and activities throughout the year which you will be able to participate in.</p>
+          <h2 style="font-family:Zona+Pro">Arrival in the <font style="color:#973999">UK</font></h2>
+          <p class="color-contrast-medium" align="justify" style="font-family: Kollektif;text-align: justify">Some 8 hours of flying later, you have arrived in the UK. This country is about to transform your life. As an eduINUK student, you also automatically become a member of the <a href="https://www.nisau.org.uk" target="_blank">National Indian Students and Alumni Union UK (NISAU)</a>. NISAU is the oldest and largest body representing Indian students and alumni in the UK and are there to look after your welfare and to help you with any problems you may have. They also host amazing events and activities throughout the year which you will be able to participate in.</p>
 
           <div class="flex justify-between items-center">
-            <span class="cd-timeline__date">Step 6</span>
           </div>
         </div> <!-- cd-timeline__content -->
       </div> <!-- cd-timeline__block -->
@@ -851,496 +955,6 @@ section .login-overlay{
         </div> <!-- end of container -->
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
-
-    <div class="overlay overlay-content" style="margin-top: 10px">
-    <button type="button" class="overlay-close">Close</button>
-      <section class="login-part">
-        <p class="login-overlay">
-          Book an Appointment<br>
-        </p>
-        <p class="login-overlay" style="font-size: 1em">
-          A member of the eduInUK team will be in touch ASAP to book your free online consultation with one of our experts.
-        </p>
-        <form>
-          <input type="text" name="fname" placeholder="First Name" class="form-control2" required />
-          <input type="text" name="lname" placeholder="Last Name" class="form-control2" required/>
-          <input type="text" name="email" placeholder="Email ID" class="form-control2" required/>
-          <input type="text" name="tel" placeholder="Mobile Number" class="form-control2" required/>
-          <select name="Nationality" placeholder="Nationality" class="form-control2" style="margin-bottom: 0.5rem" required>
-            <option value="">Your Nationality</option>
-            <option value="afghan">Afghan</option>
-            <option value="albanian">Albanian</option>
-            <option value="algerian">Algerian</option>
-            <option value="american">American</option>
-            <option value="andorran">Andorran</option>
-            <option value="angolan">Angolan</option>
-            <option value="antiguans">Antiguans</option>
-            <option value="argentinean">Argentinean</option>
-            <option value="armenian">Armenian</option>
-            <option value="australian">Australian</option>
-            <option value="austrian">Austrian</option>
-            <option value="azerbaijani">Azerbaijani</option>
-            <option value="bahamian">Bahamian</option>
-            <option value="bahraini">Bahraini</option>
-            <option value="bangladeshi">Bangladeshi</option>
-            <option value="barbadian">Barbadian</option>
-            <option value="barbudans">Barbudans</option>
-            <option value="batswana">Batswana</option>
-            <option value="belarusian">Belarusian</option>
-            <option value="belgian">Belgian</option>
-            <option value="belizean">Belizean</option>
-            <option value="beninese">Beninese</option>
-            <option value="bhutanese">Bhutanese</option>
-            <option value="bolivian">Bolivian</option>
-            <option value="bosnian">Bosnian</option>
-            <option value="brazilian">Brazilian</option>
-            <option value="british">British</option>
-            <option value="bruneian">Bruneian</option>
-            <option value="bulgarian">Bulgarian</option>
-            <option value="burkinabe">Burkinabe</option>
-            <option value="burmese">Burmese</option>
-            <option value="burundian">Burundian</option>
-            <option value="cambodian">Cambodian</option>
-            <option value="cameroonian">Cameroonian</option>
-            <option value="canadian">Canadian</option>
-            <option value="cape verdean">Cape Verdean</option>
-            <option value="central african">Central African</option>
-            <option value="chadian">Chadian</option>
-            <option value="chilean">Chilean</option>
-            <option value="chinese">Chinese</option>
-            <option value="colombian">Colombian</option>
-            <option value="comoran">Comoran</option>
-            <option value="congolese">Congolese</option>
-            <option value="costa rican">Costa Rican</option>
-            <option value="croatian">Croatian</option>
-            <option value="cuban">Cuban</option>
-            <option value="cypriot">Cypriot</option>
-            <option value="czech">Czech</option>
-            <option value="danish">Danish</option>
-            <option value="djibouti">Djibouti</option>
-            <option value="dominican">Dominican</option>
-            <option value="dutch">Dutch</option>
-            <option value="east timorese">East Timorese</option>
-            <option value="ecuadorean">Ecuadorean</option>
-            <option value="egyptian">Egyptian</option>
-            <option value="emirian">Emirian</option>
-            <option value="equatorial guinean">Equatorial Guinean</option>
-            <option value="eritrean">Eritrean</option>
-            <option value="estonian">Estonian</option>
-            <option value="ethiopian">Ethiopian</option>
-            <option value="fijian">Fijian</option>
-            <option value="filipino">Filipino</option>
-            <option value="finnish">Finnish</option>
-            <option value="french">French</option>
-            <option value="gabonese">Gabonese</option>
-            <option value="gambian">Gambian</option>
-            <option value="georgian">Georgian</option>
-            <option value="german">German</option>
-            <option value="ghanaian">Ghanaian</option>
-            <option value="greek">Greek</option>
-            <option value="grenadian">Grenadian</option>
-            <option value="guatemalan">Guatemalan</option>
-            <option value="guinea-bissauan">Guinea-Bissauan</option>
-            <option value="guinean">Guinean</option>
-            <option value="guyanese">Guyanese</option>
-            <option value="haitian">Haitian</option>
-            <option value="herzegovinian">Herzegovinian</option>
-            <option value="honduran">Honduran</option>
-            <option value="hungarian">Hungarian</option>
-            <option value="icelander">Icelander</option>
-            <option value="indian">Indian</option>
-            <option value="indonesian">Indonesian</option>
-            <option value="iranian">Iranian</option>
-            <option value="iraqi">Iraqi</option>
-            <option value="irish">Irish</option>
-            <option value="israeli">Israeli</option>
-            <option value="italian">Italian</option>
-            <option value="ivorian">Ivorian</option>
-            <option value="jamaican">Jamaican</option>
-            <option value="japanese">Japanese</option>
-            <option value="jordanian">Jordanian</option>
-            <option value="kazakhstani">Kazakhstani</option>
-            <option value="kenyan">Kenyan</option>
-            <option value="kittian and nevisian">Kittian and Nevisian</option>
-            <option value="kuwaiti">Kuwaiti</option>
-            <option value="kyrgyz">Kyrgyz</option>
-            <option value="laotian">Laotian</option>
-            <option value="latvian">Latvian</option>
-            <option value="lebanese">Lebanese</option>
-            <option value="liberian">Liberian</option>
-            <option value="libyan">Libyan</option>
-            <option value="liechtensteiner">Liechtensteiner</option>
-            <option value="lithuanian">Lithuanian</option>
-            <option value="luxembourger">Luxembourger</option>
-            <option value="macedonian">Macedonian</option>
-            <option value="malagasy">Malagasy</option>
-            <option value="malawian">Malawian</option>
-            <option value="malaysian">Malaysian</option>
-            <option value="maldivan">Maldivan</option>
-            <option value="malian">Malian</option>
-            <option value="maltese">Maltese</option>
-            <option value="marshallese">Marshallese</option>
-            <option value="mauritanian">Mauritanian</option>
-            <option value="mauritian">Mauritian</option>
-            <option value="mexican">Mexican</option>
-            <option value="micronesian">Micronesian</option>
-            <option value="moldovan">Moldovan</option>
-            <option value="monacan">Monacan</option>
-            <option value="mongolian">Mongolian</option>
-            <option value="moroccan">Moroccan</option>
-            <option value="mosotho">Mosotho</option>
-            <option value="motswana">Motswana</option>
-            <option value="mozambican">Mozambican</option>
-            <option value="namibian">Namibian</option>
-            <option value="nauruan">Nauruan</option>
-            <option value="nepalese">Nepalese</option>
-            <option value="new zealander">New Zealander</option>
-            <option value="ni-vanuatu">Ni-Vanuatu</option>
-            <option value="nicaraguan">Nicaraguan</option>
-            <option value="nigerien">Nigerien</option>
-            <option value="north korean">North Korean</option>
-            <option value="northern irish">Northern Irish</option>
-            <option value="norwegian">Norwegian</option>
-            <option value="omani">Omani</option>
-            <option value="pakistani">Pakistani</option>
-            <option value="palauan">Palauan</option>
-            <option value="panamanian">Panamanian</option>
-            <option value="papua new guinean">Papua New Guinean</option>
-            <option value="paraguayan">Paraguayan</option>
-            <option value="peruvian">Peruvian</option>
-            <option value="polish">Polish</option>
-            <option value="portuguese">Portuguese</option>
-            <option value="qatari">Qatari</option>
-            <option value="romanian">Romanian</option>
-            <option value="russian">Russian</option>
-            <option value="rwandan">Rwandan</option>
-            <option value="saint lucian">Saint Lucian</option>
-            <option value="salvadoran">Salvadoran</option>
-            <option value="samoan">Samoan</option>
-            <option value="san marinese">San Marinese</option>
-            <option value="sao tomean">Sao Tomean</option>
-            <option value="saudi">Saudi</option>
-            <option value="scottish">Scottish</option>
-            <option value="senegalese">Senegalese</option>
-            <option value="serbian">Serbian</option>
-            <option value="seychellois">Seychellois</option>
-            <option value="sierra leonean">Sierra Leonean</option>
-            <option value="singaporean">Singaporean</option>
-            <option value="slovakian">Slovakian</option>
-            <option value="slovenian">Slovenian</option>
-            <option value="solomon islander">Solomon Islander</option>
-            <option value="somali">Somali</option>
-            <option value="south african">South African</option>
-            <option value="south korean">South Korean</option>
-            <option value="spanish">Spanish</option>
-            <option value="sri lankan">Sri Lankan</option>
-            <option value="sudanese">Sudanese</option>
-            <option value="surinamer">Surinamer</option>
-            <option value="swazi">Swazi</option>
-            <option value="swedish">Swedish</option>
-            <option value="swiss">Swiss</option>
-            <option value="syrian">Syrian</option>
-            <option value="taiwanese">Taiwanese</option>
-            <option value="tajik">Tajik</option>
-            <option value="tanzanian">Tanzanian</option>
-            <option value="thai">Thai</option>
-            <option value="togolese">Togolese</option>
-            <option value="tongan">Tongan</option>
-            <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
-            <option value="tunisian">Tunisian</option>
-            <option value="turkish">Turkish</option>
-            <option value="tuvaluan">Tuvaluan</option>
-            <option value="ugandan">Ugandan</option>
-            <option value="ukrainian">Ukrainian</option>
-            <option value="uruguayan">Uruguayan</option>
-            <option value="uzbekistani">Uzbekistani</option>
-            <option value="venezuelan">Venezuelan</option>
-            <option value="vietnamese">Vietnamese</option>
-            <option value="welsh">Welsh</option>
-            <option value="yemenite">Yemenite</option>
-            <option value="zambian">Zambian</option>
-            <option value="zimbabwean">Zimbabwean</option>
-          </select>
-          <select name="resident" placeholder="Current Country of Residence" class="form-control2" required/>
-             <option value="">Current Country of Residence</option>       
-             <option value="Afganistan">Afghanistan</option>
-             <option value="Albania">Albania</option>
-             <option value="Algeria">Algeria</option>
-             <option value="American Samoa">American Samoa</option>
-             <option value="Andorra">Andorra</option>
-             <option value="Angola">Angola</option>
-             <option value="Anguilla">Anguilla</option>
-             <option value="Antigua & Barbuda">Antigua & Barbuda</option>
-             <option value="Argentina">Argentina</option>
-             <option value="Armenia">Armenia</option>
-             <option value="Aruba">Aruba</option>
-             <option value="Australia">Australia</option>
-             <option value="Austria">Austria</option>
-             <option value="Azerbaijan">Azerbaijan</option>
-             <option value="Bahamas">Bahamas</option>
-             <option value="Bahrain">Bahrain</option>
-             <option value="Bangladesh">Bangladesh</option>
-             <option value="Barbados">Barbados</option>
-             <option value="Belarus">Belarus</option>
-             <option value="Belgium">Belgium</option>
-             <option value="Belize">Belize</option>
-             <option value="Benin">Benin</option>
-             <option value="Bermuda">Bermuda</option>
-             <option value="Bhutan">Bhutan</option>
-             <option value="Bolivia">Bolivia</option>
-             <option value="Bonaire">Bonaire</option>
-             <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
-             <option value="Botswana">Botswana</option>
-             <option value="Brazil">Brazil</option>
-             <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
-             <option value="Brunei">Brunei</option>
-             <option value="Bulgaria">Bulgaria</option>
-             <option value="Burkina Faso">Burkina Faso</option>
-             <option value="Burundi">Burundi</option>
-             <option value="Cambodia">Cambodia</option>
-             <option value="Cameroon">Cameroon</option>
-             <option value="Canada">Canada</option>
-             <option value="Canary Islands">Canary Islands</option>
-             <option value="Cape Verde">Cape Verde</option>
-             <option value="Cayman Islands">Cayman Islands</option>
-             <option value="Central African Republic">Central African Republic</option>
-             <option value="Chad">Chad</option>
-             <option value="Channel Islands">Channel Islands</option>
-             <option value="Chile">Chile</option>
-             <option value="China">China</option>
-             <option value="Christmas Island">Christmas Island</option>
-             <option value="Cocos Island">Cocos Island</option>
-             <option value="Colombia">Colombia</option>
-             <option value="Comoros">Comoros</option>
-             <option value="Congo">Congo</option>
-             <option value="Cook Islands">Cook Islands</option>
-             <option value="Costa Rica">Costa Rica</option>
-             <option value="Cote DIvoire">Cote DIvoire</option>
-             <option value="Croatia">Croatia</option>
-             <option value="Cuba">Cuba</option>
-             <option value="Curaco">Curacao</option>
-             <option value="Cyprus">Cyprus</option>
-             <option value="Czech Republic">Czech Republic</option>
-             <option value="Denmark">Denmark</option>
-             <option value="Djibouti">Djibouti</option>
-             <option value="Dominica">Dominica</option>
-             <option value="Dominican Republic">Dominican Republic</option>
-             <option value="East Timor">East Timor</option>
-             <option value="Ecuador">Ecuador</option>
-             <option value="Egypt">Egypt</option>
-             <option value="El Salvador">El Salvador</option>
-             <option value="Equatorial Guinea">Equatorial Guinea</option>
-             <option value="Eritrea">Eritrea</option>
-             <option value="Estonia">Estonia</option>
-             <option value="Ethiopia">Ethiopia</option>
-             <option value="Falkland Islands">Falkland Islands</option>
-             <option value="Faroe Islands">Faroe Islands</option>
-             <option value="Fiji">Fiji</option>
-             <option value="Finland">Finland</option>
-             <option value="France">France</option>
-             <option value="French Guiana">French Guiana</option>
-             <option value="French Polynesia">French Polynesia</option>
-             <option value="French Southern Ter">French Southern Ter</option>
-             <option value="Gabon">Gabon</option>
-             <option value="Gambia">Gambia</option>
-             <option value="Georgia">Georgia</option>
-             <option value="Germany">Germany</option>
-             <option value="Ghana">Ghana</option>
-             <option value="Gibraltar">Gibraltar</option>
-             <option value="Great Britain">Great Britain</option>
-             <option value="Greece">Greece</option>
-             <option value="Greenland">Greenland</option>
-             <option value="Grenada">Grenada</option>
-             <option value="Guadeloupe">Guadeloupe</option>
-             <option value="Guam">Guam</option>
-             <option value="Guatemala">Guatemala</option>
-             <option value="Guinea">Guinea</option>
-             <option value="Guyana">Guyana</option>
-             <option value="Haiti">Haiti</option>
-             <option value="Hawaii">Hawaii</option>
-             <option value="Honduras">Honduras</option>
-             <option value="Hong Kong">Hong Kong</option>
-             <option value="Hungary">Hungary</option>
-             <option value="Iceland">Iceland</option>
-             <option value="Indonesia">Indonesia</option>
-             <option value="India">India</option>
-             <option value="Iran">Iran</option>
-             <option value="Iraq">Iraq</option>
-             <option value="Ireland">Ireland</option>
-             <option value="Isle of Man">Isle of Man</option>
-             <option value="Israel">Israel</option>
-             <option value="Italy">Italy</option>
-             <option value="Jamaica">Jamaica</option>
-             <option value="Japan">Japan</option>
-             <option value="Jordan">Jordan</option>
-             <option value="Kazakhstan">Kazakhstan</option>
-             <option value="Kenya">Kenya</option>
-             <option value="Kiribati">Kiribati</option>
-             <option value="Korea North">Korea North</option>
-             <option value="Korea Sout">Korea South</option>
-             <option value="Kuwait">Kuwait</option>
-             <option value="Kyrgyzstan">Kyrgyzstan</option>
-             <option value="Laos">Laos</option>
-             <option value="Latvia">Latvia</option>
-             <option value="Lebanon">Lebanon</option>
-             <option value="Lesotho">Lesotho</option>
-             <option value="Liberia">Liberia</option>
-             <option value="Libya">Libya</option>
-             <option value="Liechtenstein">Liechtenstein</option>
-             <option value="Lithuania">Lithuania</option>
-             <option value="Luxembourg">Luxembourg</option>
-             <option value="Macau">Macau</option>
-             <option value="Macedonia">Macedonia</option>
-             <option value="Madagascar">Madagascar</option>
-             <option value="Malaysia">Malaysia</option>
-             <option value="Malawi">Malawi</option>
-             <option value="Maldives">Maldives</option>
-             <option value="Mali">Mali</option>
-             <option value="Malta">Malta</option>
-             <option value="Marshall Islands">Marshall Islands</option>
-             <option value="Martinique">Martinique</option>
-             <option value="Mauritania">Mauritania</option>
-             <option value="Mauritius">Mauritius</option>
-             <option value="Mayotte">Mayotte</option>
-             <option value="Mexico">Mexico</option>
-             <option value="Midway Islands">Midway Islands</option>
-             <option value="Moldova">Moldova</option>
-             <option value="Monaco">Monaco</option>
-             <option value="Mongolia">Mongolia</option>
-             <option value="Montserrat">Montserrat</option>
-             <option value="Morocco">Morocco</option>
-             <option value="Mozambique">Mozambique</option>
-             <option value="Myanmar">Myanmar</option>
-             <option value="Nambia">Nambia</option>
-             <option value="Nauru">Nauru</option>
-             <option value="Nepal">Nepal</option>
-             <option value="Netherland Antilles">Netherland Antilles</option>
-             <option value="Netherlands">Netherlands (Holland, Europe)</option>
-             <option value="Nevis">Nevis</option>
-             <option value="New Caledonia">New Caledonia</option>
-             <option value="New Zealand">New Zealand</option>
-             <option value="Nicaragua">Nicaragua</option>
-             <option value="Niger">Niger</option>
-             <option value="Nigeria">Nigeria</option>
-             <option value="Niue">Niue</option>
-             <option value="Norfolk Island">Norfolk Island</option>
-             <option value="Norway">Norway</option>
-             <option value="Oman">Oman</option>
-             <option value="Pakistan">Pakistan</option>
-             <option value="Palau Island">Palau Island</option>
-             <option value="Palestine">Palestine</option>
-             <option value="Panama">Panama</option>
-             <option value="Papua New Guinea">Papua New Guinea</option>
-             <option value="Paraguay">Paraguay</option>
-             <option value="Peru">Peru</option>
-             <option value="Phillipines">Philippines</option>
-             <option value="Pitcairn Island">Pitcairn Island</option>
-             <option value="Poland">Poland</option>
-             <option value="Portugal">Portugal</option>
-             <option value="Puerto Rico">Puerto Rico</option>
-             <option value="Qatar">Qatar</option>
-             <option value="Republic of Montenegro">Republic of Montenegro</option>
-             <option value="Republic of Serbia">Republic of Serbia</option>
-             <option value="Reunion">Reunion</option>
-             <option value="Romania">Romania</option>
-             <option value="Russia">Russia</option>
-             <option value="Rwanda">Rwanda</option>
-             <option value="St Barthelemy">St Barthelemy</option>
-             <option value="St Eustatius">St Eustatius</option>
-             <option value="St Helena">St Helena</option>
-             <option value="St Kitts-Nevis">St Kitts-Nevis</option>
-             <option value="St Lucia">St Lucia</option>
-             <option value="St Maarten">St Maarten</option>
-             <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
-             <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
-             <option value="Saipan">Saipan</option>
-             <option value="Samoa">Samoa</option>
-             <option value="Samoa American">Samoa American</option>
-             <option value="San Marino">San Marino</option>
-             <option value="Sao Tome & Principe">Sao Tome & Principe</option>
-             <option value="Saudi Arabia">Saudi Arabia</option>
-             <option value="Senegal">Senegal</option>
-             <option value="Seychelles">Seychelles</option>
-             <option value="Sierra Leone">Sierra Leone</option>
-             <option value="Singapore">Singapore</option>
-             <option value="Slovakia">Slovakia</option>
-             <option value="Slovenia">Slovenia</option>
-             <option value="Solomon Islands">Solomon Islands</option>
-             <option value="Somalia">Somalia</option>
-             <option value="South Africa">South Africa</option>
-             <option value="Spain">Spain</option>
-             <option value="Sri Lanka">Sri Lanka</option>
-             <option value="Sudan">Sudan</option>
-             <option value="Suriname">Suriname</option>
-             <option value="Swaziland">Swaziland</option>
-             <option value="Sweden">Sweden</option>
-             <option value="Switzerland">Switzerland</option>
-             <option value="Syria">Syria</option>
-             <option value="Tahiti">Tahiti</option>
-             <option value="Taiwan">Taiwan</option>
-             <option value="Tajikistan">Tajikistan</option>
-             <option value="Tanzania">Tanzania</option>
-             <option value="Thailand">Thailand</option>
-             <option value="Togo">Togo</option>
-             <option value="Tokelau">Tokelau</option>
-             <option value="Tonga">Tonga</option>
-             <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-             <option value="Tunisia">Tunisia</option>
-             <option value="Turkey">Turkey</option>
-             <option value="Turkmenistan">Turkmenistan</option>
-             <option value="Turks & Caicos Is">Turks & Caicos Is</option>
-             <option value="Tuvalu">Tuvalu</option>
-             <option value="Uganda">Uganda</option>
-             <option value="United Kingdom">United Kingdom</option>
-             <option value="Ukraine">Ukraine</option>
-             <option value="United Arab Erimates">United Arab Emirates</option>
-             <option value="United States of America">United States of America</option>
-             <option value="Uraguay">Uruguay</option>
-             <option value="Uzbekistan">Uzbekistan</option>
-             <option value="Vanuatu">Vanuatu</option>
-             <option value="Vatican City State">Vatican City State</option>
-             <option value="Venezuela">Venezuela</option>
-             <option value="Vietnam">Vietnam</option>
-             <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
-             <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
-             <option value="Wake Island">Wake Island</option>
-             <option value="Wallis & Futana Is">Wallis & Futana Is</option>
-             <option value="Yemen">Yemen</option>
-             <option value="Zaire">Zaire</option>
-             <option value="Zambia">Zambia</option>
-             <option value="Zimbabwe">Zimbabwe</option>
-          </select>
-          <select name="typeofstudy" placeholder="Type of Study" class="form-control2" required/>
-            <option value="">Type of Study</option>
-            <option value="UG">Undergraduate Program</option>
-            <option value="PG">Postgraduate Program</option>
-            <option value="PhD">PhD</option>
-            <option value="Foundation">Foundation</option>
-            <option value="Diploma">Diploma</option>
-           </select>
-           <select name="year" placeholder="Year of Study" class="form-control2" required/>
-            <option value="">Year of Study</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-           </select>
-          <input type="text" name="subject" placeholder="Which Subjects are you interested in?" class="form-control2" style="margin-top:0.5rem" required/>
-          <select name="how" placeholder="How did you hear about us?" class="form-control2" required/>
-            <option value="">How did you hear about us?</option>
-            <option value="Google Search/Engine">Google/Search Engine</option>
-            <option value="Word of Mouth">Word of Mouth</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Instagram">Instagram</option>
-            <option value="Twitter">Twitter</option>
-            <option value="Teacher">School/College/Teacher</option>
-           </select>
-           <p style="font-size:1rem;color:white"><input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I allow EduInUK to reach out to me through e-mail and phone.</p> 
-                            <div class="help-block with-errors"></div>
-          <button type="submit" class="btn btn-primary btn-block btn-large">Book my Consultation</button>
-        </form>
-       </section>
-  
-</div>
     
         
     <!-- Scripts -->
@@ -1429,19 +1043,18 @@ function isElementInViewport(el) {
 </script>
 <script src="css/main.js"></script>
 <script>
-  $('#trigger-overlay').on('click', function(){
-  $('.overlay-content').addClass('open');
-});
-  $('#trigger-overlay2').on('click', function(){
-  $('.overlay-content').addClass('open');
-});
-  $('#trigger-overlay3').on('click', function(){
-  $('.overlay-content').addClass('open');
-});
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
-$('.overlay-close').on('click', function(){
-  $('.overlay-content').removeClass('open');
-});
+function openForm2() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
 </script>
 </body>
 </html>

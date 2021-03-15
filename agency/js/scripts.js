@@ -343,7 +343,7 @@
 
     /* Back To Top Button */
     // create the back to top button
-    $('body').prepend('<a onClick="openForm2()" href="#" class="back-to-top">Book an Appointment</a>');
+    $('body').prepend('<a href="enquire.html" class="back-to-top">Book an Appointment</a>');
     var amountScrolled = 500;
     $(window).scroll(function() {
         if ($(window).scrollTop() > amountScrolled) {

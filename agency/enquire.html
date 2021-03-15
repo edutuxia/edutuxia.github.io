@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="EdInUK one liner data.">
+    <meta name="author" content="Aakash Bansal (www.bansalab.me)">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>edInUK - Study In the UK | Indian Students in UK | Education in the UK</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zona+Pro" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/timeline.css" rel="stylesheet">
+    <link href="css/timelinestyle.css" rel="stylesheet">
+    
+    <!-- Favicon  -->
+    <link rel="icon" href="images/logo.png">
+
+<style>
+.collapsible {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 25px;
+}
+
+.active, .collapsible:hover {
+}
+
+.collapsible:after {
+  color: #000;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+
+.collapsible-content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #fff;
+}
+
+.inline-photo {
+  border: 1em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  max-width: 600px;
+  width: 90%;
+  will-change: transform, opacity;
+}
+
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(-2deg);
+}
+
+</style>
+
+<style>
+.collapsible2 {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.active2, .collapsible2:hover {
+  background-color: #000;
+}
+
+.collapsible2:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active2:after {
+  content: "\2212";
+}
+
+.collapsible-content2 {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.viewport-header {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: none;
+  width: 80vw;
+  left: 10%;
+  height: 40vh;
+  overflow: auto;
+  background: rgba(black, 0.66);
+  color: white;
+  position: relative;
+  padding: 1rem;
+}
+
+</style>
+
+<style>
+ .btngo {
+  border: 2px solid black;
+  background-color: #0065b0;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ .gobtn {
+  border-color: #0065b0;
+  color:white;
+}
+.gobtn:hover {
+  border-color: #0065b0;
+  background-color: white;
+  color:#0065b0;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: sticky;
+  bottom: 10%;
+  z-index: 1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 80%;
+  height: 400px;
+  margin: 15%;
+  padding: 10px;
+  background-color: white;
+  overflow-y: scroll;
+  border-radius: 0px;
+}
+
+#close-x {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    border-radius:20px;
+    color:#fff;
+}
+
+#close-x:hover {
+        float:right;
+        display:inline-block;
+        padding:2px 5px;
+        background:#f00;
+    color:#fff;
+    }
+
+/* Full-width input fields */
+.form-container input, select {
+  width: 90%;
+  padding: 3px;
+  margin: 5px 0 10px 0;
+  border-radius: 3px;
+  border:2px solid black;
+  background: #ffffff;
+}
+
+/* Set a style for the submit/login button */
+.formbtn {
+  background-color: #113448;
+  font-family:Zona+Pro;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  border-radius:30px;
+}
+
+/* Add a red background color to the cancel button */
+
+/* Add some hover effects to buttons */
+.formbtn:hover {
+  background-color:white;
+  border:2px solid black;
+  color:#113448;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top" style="background-color: #113448">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="alternative" width="180" height="auto" style="margin-left:-60px"></a>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto" style="font-size: 17px">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#header">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#intro">What We Offer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#services">Our Services</a>
+                </li>
+                <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#intro" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">What We Offer</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#services"><span class="item-text">Our Services</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                    </div>
+                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#path-uk">Your Path to the UK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#why-the-uk">Why Study in the UK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="enquire.html">Enquire Today</a>
+                </li>
+            </ul>
+            <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="https://www.facebook.com/eduInUK1/">
+                        <span class="hexagon"></span>
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="https://www.twitter.com/_eduInUK">
+                        <span class="hexagon"></span>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="https://www.instagram.com/eduInUK/">
+                        <span class="hexagon"></span>
+                        <i class="fab fa-instagram fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+    <!-- Intro -->
+
+                  <!--<img src="images/about-top.png" width="100%" height="auto">-->
+    <div id="intro" class="basic-1" style="background-image: url('images/background2.jpg')">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <form action="/action_page.php">
+    <h3><center><font style="font-family:Zona+Pro;font-size:2.5rem"><br>Book Your Appointment</font></center><br></h3>
+    <p align="center"><font style="font-family:Zona+Pro;color:black;font-size:1.3rem">Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum<br><br></font></p>
+    <table style="width: 100%;margin-left: 2.5%">
+    <colgroup>
+       <col span="1" style="width: 50%;">
+       <col span="1" style="width: 50%;">
+    </colgroup>
+      <tr>
+        <td>
+          <label for="fname"><font style="font-family:Zona+Pro;font-size:1.3rem;"><b>First Name *</b></label></font></label>
+        </td>
+        <td>
+          <label for="lname"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>Last Name *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="fname" style="width:90%;border:none; border-radius:2px;margin:5px 0 10px 0;background-color: #ccc" required></td>
+        <td><input type="text" name="lname" style="width:90%;border:none; border-radius:2px;margin:5px 0 10px 0;background-color: #ccc" required></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="mail"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>E-Mail ID *</b></label></font></label>
+        </td>
+        <td>
+          <label for="mobile"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>Mobile Number *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="mail" style="width:90%;border:none; border-radius:2px;margin:5px 0 10px 0;background-color: #ccc" required></td>
+        <td><input type="text" name="mobile" style="width:90%;border:none; border-radius:2px;margin:5px 0 10px 0;background-color: #ccc" required></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="nationality"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>Your Nationality *</b></label></font></label>
+        </td>
+        <td>
+          <label for="residence"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>Country of Residence *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><select name="nationality" style="width:90%;border:none; border-radius:2px;background-color: #ccc" required>
+            <option value="indian">Indian</option>
+            <option value="afghan">Afghan</option>
+            <option value="albanian">Albanian</option>
+            <option value="algerian">Algerian</option>
+            <option value="american">American</option>
+            <option value="andorran">Andorran</option>
+            <option value="angolan">Angolan</option>
+            <option value="antiguans">Antiguans</option>
+            <option value="argentinean">Argentinean</option>
+            <option value="armenian">Armenian</option>
+            <option value="australian">Australian</option>
+            <option value="austrian">Austrian</option>
+            <option value="azerbaijani">Azerbaijani</option>
+            <option value="bahamian">Bahamian</option>
+            <option value="bahraini">Bahraini</option>
+            <option value="bangladeshi">Bangladeshi</option>
+            <option value="barbadian">Barbadian</option>
+            <option value="barbudans">Barbudans</option>
+            <option value="batswana">Batswana</option>
+            <option value="belarusian">Belarusian</option>
+            <option value="belgian">Belgian</option>
+            <option value="belizean">Belizean</option>
+            <option value="beninese">Beninese</option>
+            <option value="bhutanese">Bhutanese</option>
+            <option value="bolivian">Bolivian</option>
+            <option value="bosnian">Bosnian</option>
+            <option value="brazilian">Brazilian</option>
+            <option value="british">British</option>
+            <option value="bruneian">Bruneian</option>
+            <option value="bulgarian">Bulgarian</option>
+            <option value="burkinabe">Burkinabe</option>
+            <option value="burmese">Burmese</option>
+            <option value="burundian">Burundian</option>
+            <option value="cambodian">Cambodian</option>
+            <option value="cameroonian">Cameroonian</option>
+            <option value="canadian">Canadian</option>
+            <option value="cape verdean">Cape Verdean</option>
+            <option value="central african">Central African</option>
+            <option value="chadian">Chadian</option>
+            <option value="chilean">Chilean</option>
+            <option value="chinese">Chinese</option>
+            <option value="colombian">Colombian</option>
+            <option value="comoran">Comoran</option>
+            <option value="congolese">Congolese</option>
+            <option value="costa rican">Costa Rican</option>
+            <option value="croatian">Croatian</option>
+            <option value="cuban">Cuban</option>
+            <option value="cypriot">Cypriot</option>
+            <option value="czech">Czech</option>
+            <option value="danish">Danish</option>
+            <option value="djibouti">Djibouti</option>
+            <option value="dominican">Dominican</option>
+            <option value="dutch">Dutch</option>
+            <option value="east timorese">East Timorese</option>
+            <option value="ecuadorean">Ecuadorean</option>
+            <option value="egyptian">Egyptian</option>
+            <option value="emirian">Emirian</option>
+            <option value="equatorial guinean">Equatorial Guinean</option>
+            <option value="eritrean">Eritrean</option>
+            <option value="estonian">Estonian</option>
+            <option value="ethiopian">Ethiopian</option>
+            <option value="fijian">Fijian</option>
+            <option value="filipino">Filipino</option>
+            <option value="finnish">Finnish</option>
+            <option value="french">French</option>
+            <option value="gabonese">Gabonese</option>
+            <option value="gambian">Gambian</option>
+            <option value="georgian">Georgian</option>
+            <option value="german">German</option>
+            <option value="ghanaian">Ghanaian</option>
+            <option value="greek">Greek</option>
+            <option value="grenadian">Grenadian</option>
+            <option value="guatemalan">Guatemalan</option>
+            <option value="guinea-bissauan">Guinea-Bissauan</option>
+            <option value="guinean">Guinean</option>
+            <option value="guyanese">Guyanese</option>
+            <option value="haitian">Haitian</option>
+            <option value="herzegovinian">Herzegovinian</option>
+            <option value="honduran">Honduran</option>
+            <option value="hungarian">Hungarian</option>
+            <option value="icelander">Icelander</option>
+            <option value="indian">Indian</option>
+            <option value="indonesian">Indonesian</option>
+            <option value="iranian">Iranian</option>
+            <option value="iraqi">Iraqi</option>
+            <option value="irish">Irish</option>
+            <option value="israeli">Israeli</option>
+            <option value="italian">Italian</option>
+            <option value="ivorian">Ivorian</option>
+            <option value="jamaican">Jamaican</option>
+            <option value="japanese">Japanese</option>
+            <option value="jordanian">Jordanian</option>
+            <option value="kazakhstani">Kazakhstani</option>
+            <option value="kenyan">Kenyan</option>
+            <option value="kittian and nevisian">Kittian and Nevisian</option>
+            <option value="kuwaiti">Kuwaiti</option>
+            <option value="kyrgyz">Kyrgyz</option>
+            <option value="laotian">Laotian</option>
+            <option value="latvian">Latvian</option>
+            <option value="lebanese">Lebanese</option>
+            <option value="liberian">Liberian</option>
+            <option value="libyan">Libyan</option>
+            <option value="liechtensteiner">Liechtensteiner</option>
+            <option value="lithuanian">Lithuanian</option>
+            <option value="luxembourger">Luxembourger</option>
+            <option value="macedonian">Macedonian</option>
+            <option value="malagasy">Malagasy</option>
+            <option value="malawian">Malawian</option>
+            <option value="malaysian">Malaysian</option>
+            <option value="maldivan">Maldivan</option>
+            <option value="malian">Malian</option>
+            <option value="maltese">Maltese</option>
+            <option value="marshallese">Marshallese</option>
+            <option value="mauritanian">Mauritanian</option>
+            <option value="mauritian">Mauritian</option>
+            <option value="mexican">Mexican</option>
+            <option value="micronesian">Micronesian</option>
+            <option value="moldovan">Moldovan</option>
+            <option value="monacan">Monacan</option>
+            <option value="mongolian">Mongolian</option>
+            <option value="moroccan">Moroccan</option>
+            <option value="mosotho">Mosotho</option>
+            <option value="motswana">Motswana</option>
+            <option value="mozambican">Mozambican</option>
+            <option value="namibian">Namibian</option>
+            <option value="nauruan">Nauruan</option>
+            <option value="nepalese">Nepalese</option>
+            <option value="new zealander">New Zealander</option>
+            <option value="ni-vanuatu">Ni-Vanuatu</option>
+            <option value="nicaraguan">Nicaraguan</option>
+            <option value="nigerien">Nigerien</option>
+            <option value="north korean">North Korean</option>
+            <option value="northern irish">Northern Irish</option>
+            <option value="norwegian">Norwegian</option>
+            <option value="omani">Omani</option>
+            <option value="pakistani">Pakistani</option>
+            <option value="palauan">Palauan</option>
+            <option value="panamanian">Panamanian</option>
+            <option value="papua new guinean">Papua New Guinean</option>
+            <option value="paraguayan">Paraguayan</option>
+            <option value="peruvian">Peruvian</option>
+            <option value="polish">Polish</option>
+            <option value="portuguese">Portuguese</option>
+            <option value="qatari">Qatari</option>
+            <option value="romanian">Romanian</option>
+            <option value="russian">Russian</option>
+            <option value="rwandan">Rwandan</option>
+            <option value="saint lucian">Saint Lucian</option>
+            <option value="salvadoran">Salvadoran</option>
+            <option value="samoan">Samoan</option>
+            <option value="san marinese">San Marinese</option>
+            <option value="sao tomean">Sao Tomean</option>
+            <option value="saudi">Saudi</option>
+            <option value="scottish">Scottish</option>
+            <option value="senegalese">Senegalese</option>
+            <option value="serbian">Serbian</option>
+            <option value="seychellois">Seychellois</option>
+            <option value="sierra leonean">Sierra Leonean</option>
+            <option value="singaporean">Singaporean</option>
+            <option value="slovakian">Slovakian</option>
+            <option value="slovenian">Slovenian</option>
+            <option value="solomon islander">Solomon Islander</option>
+            <option value="somali">Somali</option>
+            <option value="south african">South African</option>
+            <option value="south korean">South Korean</option>
+            <option value="spanish">Spanish</option>
+            <option value="sri lankan">Sri Lankan</option>
+            <option value="sudanese">Sudanese</option>
+            <option value="surinamer">Surinamer</option>
+            <option value="swazi">Swazi</option>
+            <option value="swedish">Swedish</option>
+            <option value="swiss">Swiss</option>
+            <option value="syrian">Syrian</option>
+            <option value="taiwanese">Taiwanese</option>
+            <option value="tajik">Tajik</option>
+            <option value="tanzanian">Tanzanian</option>
+            <option value="thai">Thai</option>
+            <option value="togolese">Togolese</option>
+            <option value="tongan">Tongan</option>
+            <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+            <option value="tunisian">Tunisian</option>
+            <option value="turkish">Turkish</option>
+            <option value="tuvaluan">Tuvaluan</option>
+            <option value="ugandan">Ugandan</option>
+            <option value="ukrainian">Ukrainian</option>
+            <option value="uruguayan">Uruguayan</option>
+            <option value="uzbekistani">Uzbekistani</option>
+            <option value="venezuelan">Venezuelan</option>
+            <option value="vietnamese">Vietnamese</option>
+            <option value="welsh">Welsh</option>
+            <option value="yemenite">Yemenite</option>
+            <option value="zambian">Zambian</option>
+            <option value="zimbabwean">Zimbabwean</option>
+          </select></td>
+        <td><select name="residence" style="width:90%;border:none; border-radius:2px;background-color: #ccc" required/>
+             <option value="India">India</option>       
+             <option value="Afganistan">Afghanistan</option>
+             <option value="Albania">Albania</option>
+             <option value="Algeria">Algeria</option>
+             <option value="American Samoa">American Samoa</option>
+             <option value="Andorra">Andorra</option>
+             <option value="Angola">Angola</option>
+             <option value="Anguilla">Anguilla</option>
+             <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+             <option value="Argentina">Argentina</option>
+             <option value="Armenia">Armenia</option>
+             <option value="Aruba">Aruba</option>
+             <option value="Australia">Australia</option>
+             <option value="Austria">Austria</option>
+             <option value="Azerbaijan">Azerbaijan</option>
+             <option value="Bahamas">Bahamas</option>
+             <option value="Bahrain">Bahrain</option>
+             <option value="Bangladesh">Bangladesh</option>
+             <option value="Barbados">Barbados</option>
+             <option value="Belarus">Belarus</option>
+             <option value="Belgium">Belgium</option>
+             <option value="Belize">Belize</option>
+             <option value="Benin">Benin</option>
+             <option value="Bermuda">Bermuda</option>
+             <option value="Bhutan">Bhutan</option>
+             <option value="Bolivia">Bolivia</option>
+             <option value="Bonaire">Bonaire</option>
+             <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+             <option value="Botswana">Botswana</option>
+             <option value="Brazil">Brazil</option>
+             <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+             <option value="Brunei">Brunei</option>
+             <option value="Bulgaria">Bulgaria</option>
+             <option value="Burkina Faso">Burkina Faso</option>
+             <option value="Burundi">Burundi</option>
+             <option value="Cambodia">Cambodia</option>
+             <option value="Cameroon">Cameroon</option>
+             <option value="Canada">Canada</option>
+             <option value="Canary Islands">Canary Islands</option>
+             <option value="Cape Verde">Cape Verde</option>
+             <option value="Cayman Islands">Cayman Islands</option>
+             <option value="Central African Republic">Central African Republic</option>
+             <option value="Chad">Chad</option>
+             <option value="Channel Islands">Channel Islands</option>
+             <option value="Chile">Chile</option>
+             <option value="China">China</option>
+             <option value="Christmas Island">Christmas Island</option>
+             <option value="Cocos Island">Cocos Island</option>
+             <option value="Colombia">Colombia</option>
+             <option value="Comoros">Comoros</option>
+             <option value="Congo">Congo</option>
+             <option value="Cook Islands">Cook Islands</option>
+             <option value="Costa Rica">Costa Rica</option>
+             <option value="Cote DIvoire">Cote DIvoire</option>
+             <option value="Croatia">Croatia</option>
+             <option value="Cuba">Cuba</option>
+             <option value="Curaco">Curacao</option>
+             <option value="Cyprus">Cyprus</option>
+             <option value="Czech Republic">Czech Republic</option>
+             <option value="Denmark">Denmark</option>
+             <option value="Djibouti">Djibouti</option>
+             <option value="Dominica">Dominica</option>
+             <option value="Dominican Republic">Dominican Republic</option>
+             <option value="East Timor">East Timor</option>
+             <option value="Ecuador">Ecuador</option>
+             <option value="Egypt">Egypt</option>
+             <option value="El Salvador">El Salvador</option>
+             <option value="Equatorial Guinea">Equatorial Guinea</option>
+             <option value="Eritrea">Eritrea</option>
+             <option value="Estonia">Estonia</option>
+             <option value="Ethiopia">Ethiopia</option>
+             <option value="Falkland Islands">Falkland Islands</option>
+             <option value="Faroe Islands">Faroe Islands</option>
+             <option value="Fiji">Fiji</option>
+             <option value="Finland">Finland</option>
+             <option value="France">France</option>
+             <option value="French Guiana">French Guiana</option>
+             <option value="French Polynesia">French Polynesia</option>
+             <option value="French Southern Ter">French Southern Ter</option>
+             <option value="Gabon">Gabon</option>
+             <option value="Gambia">Gambia</option>
+             <option value="Georgia">Georgia</option>
+             <option value="Germany">Germany</option>
+             <option value="Ghana">Ghana</option>
+             <option value="Gibraltar">Gibraltar</option>
+             <option value="Great Britain">Great Britain</option>
+             <option value="Greece">Greece</option>
+             <option value="Greenland">Greenland</option>
+             <option value="Grenada">Grenada</option>
+             <option value="Guadeloupe">Guadeloupe</option>
+             <option value="Guam">Guam</option>
+             <option value="Guatemala">Guatemala</option>
+             <option value="Guinea">Guinea</option>
+             <option value="Guyana">Guyana</option>
+             <option value="Haiti">Haiti</option>
+             <option value="Hawaii">Hawaii</option>
+             <option value="Honduras">Honduras</option>
+             <option value="Hong Kong">Hong Kong</option>
+             <option value="Hungary">Hungary</option>
+             <option value="Iceland">Iceland</option>
+             <option value="Indonesia">Indonesia</option>
+             <option value="India">India</option>
+             <option value="Iran">Iran</option>
+             <option value="Iraq">Iraq</option>
+             <option value="Ireland">Ireland</option>
+             <option value="Isle of Man">Isle of Man</option>
+             <option value="Israel">Israel</option>
+             <option value="Italy">Italy</option>
+             <option value="Jamaica">Jamaica</option>
+             <option value="Japan">Japan</option>
+             <option value="Jordan">Jordan</option>
+             <option value="Kazakhstan">Kazakhstan</option>
+             <option value="Kenya">Kenya</option>
+             <option value="Kiribati">Kiribati</option>
+             <option value="Korea North">Korea North</option>
+             <option value="Korea Sout">Korea South</option>
+             <option value="Kuwait">Kuwait</option>
+             <option value="Kyrgyzstan">Kyrgyzstan</option>
+             <option value="Laos">Laos</option>
+             <option value="Latvia">Latvia</option>
+             <option value="Lebanon">Lebanon</option>
+             <option value="Lesotho">Lesotho</option>
+             <option value="Liberia">Liberia</option>
+             <option value="Libya">Libya</option>
+             <option value="Liechtenstein">Liechtenstein</option>
+             <option value="Lithuania">Lithuania</option>
+             <option value="Luxembourg">Luxembourg</option>
+             <option value="Macau">Macau</option>
+             <option value="Macedonia">Macedonia</option>
+             <option value="Madagascar">Madagascar</option>
+             <option value="Malaysia">Malaysia</option>
+             <option value="Malawi">Malawi</option>
+             <option value="Maldives">Maldives</option>
+             <option value="Mali">Mali</option>
+             <option value="Malta">Malta</option>
+             <option value="Marshall Islands">Marshall Islands</option>
+             <option value="Martinique">Martinique</option>
+             <option value="Mauritania">Mauritania</option>
+             <option value="Mauritius">Mauritius</option>
+             <option value="Mayotte">Mayotte</option>
+             <option value="Mexico">Mexico</option>
+             <option value="Midway Islands">Midway Islands</option>
+             <option value="Moldova">Moldova</option>
+             <option value="Monaco">Monaco</option>
+             <option value="Mongolia">Mongolia</option>
+             <option value="Montserrat">Montserrat</option>
+             <option value="Morocco">Morocco</option>
+             <option value="Mozambique">Mozambique</option>
+             <option value="Myanmar">Myanmar</option>
+             <option value="Nambia">Nambia</option>
+             <option value="Nauru">Nauru</option>
+             <option value="Nepal">Nepal</option>
+             <option value="Netherland Antilles">Netherland Antilles</option>
+             <option value="Netherlands">Netherlands (Holland, Europe)</option>
+             <option value="Nevis">Nevis</option>
+             <option value="New Caledonia">New Caledonia</option>
+             <option value="New Zealand">New Zealand</option>
+             <option value="Nicaragua">Nicaragua</option>
+             <option value="Niger">Niger</option>
+             <option value="Nigeria">Nigeria</option>
+             <option value="Niue">Niue</option>
+             <option value="Norfolk Island">Norfolk Island</option>
+             <option value="Norway">Norway</option>
+             <option value="Oman">Oman</option>
+             <option value="Pakistan">Pakistan</option>
+             <option value="Palau Island">Palau Island</option>
+             <option value="Palestine">Palestine</option>
+             <option value="Panama">Panama</option>
+             <option value="Papua New Guinea">Papua New Guinea</option>
+             <option value="Paraguay">Paraguay</option>
+             <option value="Peru">Peru</option>
+             <option value="Phillipines">Philippines</option>
+             <option value="Pitcairn Island">Pitcairn Island</option>
+             <option value="Poland">Poland</option>
+             <option value="Portugal">Portugal</option>
+             <option value="Puerto Rico">Puerto Rico</option>
+             <option value="Qatar">Qatar</option>
+             <option value="Republic of Montenegro">Republic of Montenegro</option>
+             <option value="Republic of Serbia">Republic of Serbia</option>
+             <option value="Reunion">Reunion</option>
+             <option value="Romania">Romania</option>
+             <option value="Russia">Russia</option>
+             <option value="Rwanda">Rwanda</option>
+             <option value="St Barthelemy">St Barthelemy</option>
+             <option value="St Eustatius">St Eustatius</option>
+             <option value="St Helena">St Helena</option>
+             <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+             <option value="St Lucia">St Lucia</option>
+             <option value="St Maarten">St Maarten</option>
+             <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+             <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+             <option value="Saipan">Saipan</option>
+             <option value="Samoa">Samoa</option>
+             <option value="Samoa American">Samoa American</option>
+             <option value="San Marino">San Marino</option>
+             <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+             <option value="Saudi Arabia">Saudi Arabia</option>
+             <option value="Senegal">Senegal</option>
+             <option value="Seychelles">Seychelles</option>
+             <option value="Sierra Leone">Sierra Leone</option>
+             <option value="Singapore">Singapore</option>
+             <option value="Slovakia">Slovakia</option>
+             <option value="Slovenia">Slovenia</option>
+             <option value="Solomon Islands">Solomon Islands</option>
+             <option value="Somalia">Somalia</option>
+             <option value="South Africa">South Africa</option>
+             <option value="Spain">Spain</option>
+             <option value="Sri Lanka">Sri Lanka</option>
+             <option value="Sudan">Sudan</option>
+             <option value="Suriname">Suriname</option>
+             <option value="Swaziland">Swaziland</option>
+             <option value="Sweden">Sweden</option>
+             <option value="Switzerland">Switzerland</option>
+             <option value="Syria">Syria</option>
+             <option value="Tahiti">Tahiti</option>
+             <option value="Taiwan">Taiwan</option>
+             <option value="Tajikistan">Tajikistan</option>
+             <option value="Tanzania">Tanzania</option>
+             <option value="Thailand">Thailand</option>
+             <option value="Togo">Togo</option>
+             <option value="Tokelau">Tokelau</option>
+             <option value="Tonga">Tonga</option>
+             <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+             <option value="Tunisia">Tunisia</option>
+             <option value="Turkey">Turkey</option>
+             <option value="Turkmenistan">Turkmenistan</option>
+             <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+             <option value="Tuvalu">Tuvalu</option>
+             <option value="Uganda">Uganda</option>
+             <option value="United Kingdom">United Kingdom</option>
+             <option value="Ukraine">Ukraine</option>
+             <option value="United Arab Erimates">United Arab Emirates</option>
+             <option value="United States of America">United States of America</option>
+             <option value="Uraguay">Uruguay</option>
+             <option value="Uzbekistan">Uzbekistan</option>
+             <option value="Vanuatu">Vanuatu</option>
+             <option value="Vatican City State">Vatican City State</option>
+             <option value="Venezuela">Venezuela</option>
+             <option value="Vietnam">Vietnam</option>
+             <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+             <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+             <option value="Wake Island">Wake Island</option>
+             <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+             <option value="Yemen">Yemen</option>
+             <option value="Zaire">Zaire</option>
+             <option value="Zambia">Zambia</option>
+             <option value="Zimbabwe">Zimbabwe</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="type"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>Type of Study *</b></label></font></label>
+        </td>
+        <td>
+          <label for="year"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>Year of Study *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><select name="type" style="width:90%;border:none; border-radius:2px;background-color: #ccc" required/>
+            <option value="UG">Undergraduate Program</option>
+            <option value="PG">Postgraduate Program</option>
+            <option value="PhD">PhD</option>
+            <option value="Foundation">Foundation</option>
+            <option value="Diploma">Diploma</option>
+           </select></td>
+        <td><select name="year" style="width:90%;border:none; border-radius:2px;background-color: #ccc" required/>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+           </select></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="subject"><font style="font-family:Zona+Pro;font-size:1.3rem;margin:5px 0 10px 0"><b>Interested Subject *</b></label></font></label>
+        </td>
+        <td>
+          <label for="hear"><font style="font-family:Zona+Pro;font-size:1.3rem"><b>How did you hear about us *</b></label></font></label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="subject" style="width:90%;border:none;background-color: #ccc; border-radius:2px;" required></td>
+        <td><select name="hear" style="width:90%;border:none; border-radius:2px;background-color: #ccc" required/>
+            <option value="Google Search/Engine">Google/Search Engine</option>
+            <option value="Word of Mouth">Word of Mouth</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Twitter">Twitter</option>
+            <option value="Teacher">School/College/Teacher</option>
+           </select></td>
+      </tr>
+    </table>
+    <br><br>
+    <center>
+      <button type="submit" class="formbtn"><b>Enquire Now</b></button>
+      </center>
+  </form>
+</div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+
+   
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Few Words About Edutuxia</h4>
+                        <p class="white">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ...</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li>
+                                <a class="white" href="#">Standard Package</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Tools</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li>
+                                <a class="white" href="#">EduFind</a>
+                            </li>
+                            <li>
+                               <a class="white" href="#">Self Assessment Test</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Partners</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li>
+                                <a class="white" href="https://www.nisau.org.uk">NISAU UK</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2020 by <a href="https://www.bansalab.me">Aakash Bansal</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+        
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script>
+var coll = document.getElementsByClassName("collapsible2");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active2");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+// Detect request animation frame
+var scroll = window.requestAnimationFrame ||
+             // IE Fallback
+             function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+
+function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+
+    scroll(loop);
+}
+
+// Call the loop for the first time
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+</script>
+<script src="css/main.js"></script>
+<script>
+  $('#trigger-overlay').on('click', function(){
+  $('.overlay-content').addClass('open');
+});
+  $('#trigger-overlay2').on('click', function(){
+  $('.overlay-content').addClass('open');
+});
+  $('#trigger-overlay3').on('click', function(){
+  $('.overlay-content').addClass('open');
+});
+
+$('.overlay-close').on('click', function(){
+  $('.overlay-content').removeClass('open');
+});
+</script>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function openForm2() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+</body>
+</html>
+

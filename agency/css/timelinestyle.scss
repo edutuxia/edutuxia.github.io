@@ -9,12 +9,12 @@
 
 :root {
   // colors
-  @include defineColorHSL(--cd-color-1, 206, 21%, 24%); // Navy
-  @include defineColorHSL(--cd-color-2, 205, 38%, 89%); // Blue
-  @include defineColorHSL(--cd-color-3, 207, 10%, 55%); // Grey
-  @include defineColorHSL(--cd-color-4, 111, 51%, 60%); // Green
-  @include defineColorHSL(--cd-color-5, 356, 53%, 49%); // Red
-  @include defineColorHSL(--cd-color-6, 47, 85%, 61%);  // Yellow
+  @include defineColorRGB(--cd-color-1, 226,56,56); // Navy
+  @include defineColorRGB(--cd-color-2, 226,56,56); // Blue
+  @include defineColorRGB(--cd-color-3, 226,56,56); // Grey
+  @include defineColorRGB(--cd-color-4, 226,56,56); // Green
+  @include defineColorRGB(--cd-color-5, 226,56,56); // Red
+  @include defineColorRGB(--cd-color-6, 226,56,56);  // Yellow
 
   // header
   --cd-header-height: 200px;
@@ -125,15 +125,15 @@
   }
 }
 
-.cd-timeline__img--picture {
-  background-color: var(--cd-color-4);
+.cd-timeline__img--a {
+  background-color: var(rgb(255,56,56));
 }
 
-.cd-timeline__img--movie {
+.cd-timeline__img--b {
   background-color: var(--cd-color-5);
 }
 
-.cd-timeline__img--location {
+.cd-timeline__img--c {
   background-color: var(--cd-color-6);
 }
 
